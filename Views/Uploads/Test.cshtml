@@ -1,0 +1,41 @@
+
+@{
+    ViewData["Title"] = "Upload Excel File";
+}
+
+<h1>Upload Excel File</h1>
+
+<h4>Upload your Excel file to add spends data to the database</h4>
+<hr />
+<div class="row">
+        <form id="uploadForm" asp-action="Test" enctype="multipart/form-data" method="post">
+            <div class="col-md-8">
+     			<div class="form-group">
+                   <label class="control-label">Upload Excel file</label>
+                   <input id="ff" name="ff" type="file" class="form-control" />
+                </div>
+            </div>
+			<div class="col-md-8">
+                <div class="form-group">
+                    <input type="submit" value="Upload" class="btn btn-primary" />
+                </div>
+		    </div>
+			<div class="col-md-12">
+			    <progress id="uploadProgress"></progress>
+			</div>
+        </form>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+	   <div id="logs"></div>
+	</div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Uploads</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

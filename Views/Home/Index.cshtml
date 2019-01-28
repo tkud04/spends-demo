@@ -1,0 +1,151 @@
+﻿@model SpendsDemo.Models.SpendsCategoryViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<form id="dt-1">
+@foreach(var item in Model.Spends){
+<input type="hidden" data-month="@Html.DisplayFor(modelItem => item.Month)" data-media="@Html.DisplayFor(modelItem => item.Media)" data-id="@Html.DisplayFor(modelItem => item.Id)" data-name="@Html.DisplayFor(modelItem => item.Name)" data-spend="@Html.DisplayFor(modelItem => item.TotalSpend)">
+}
+</form>
+
+<form id="dt-month">
+@foreach(var item in Model.Months){
+<input type="hidden" name="@Html.DisplayFor(modelItem => item)" value="@Html.DisplayFor(modelItem => item)">
+}
+</form>
+
+<h2 class="text-primary">Visualization Tool 1.0</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Yearly Sales </h4>
+
+                            </div>
+                            <div class="sales-chart">
+                                <canvas id="sales-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Total Spends From Jan to Feb 2016 </h4>
+
+                            </div>
+                            <div class="sales-chart">
+                                <canvas id="team-chart"></canvas>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <div class="row">
+                    <!-- Bar Chart -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Bar chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="barChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Radar Chart -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Rader chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Line Chart -->
+                    <div class="col-sm-12 col-md-8">
+                        <div class="panel panel-bd lobidrag">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Line chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pie Chart -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Pie chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Doughnut Chart -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Doughut chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="doughutChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Polar Chart -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Polar chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="polarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Bar Chart -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Single Bar Chart</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="singelBarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+
+@section Scripts{
+   <script src="~/js/lib/chart-js/Chart.bundle.js"></script>
+    <script src="~/js/lib/chart-js/chartjs-init.js" asp-append-version="true"></script>
+}

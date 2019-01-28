@@ -1,0 +1,78 @@
+﻿@model SpendsDemo.Models.SpendsCategoryViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+<div class="col-lg-12">
+<form asp-controller="Spends" asp-action="linqtest">
+   <div class="form-group">
+     <label for="x">Enter attribute name for X values:</label>
+     <input type="text" name="x">
+   </div>
+   <div class="form-group">
+     <label for="y">Enter attribute name for Y values:</label>
+     <input type="text" name="y">
+  </div>
+  <div class="form-group">
+     <label for="filter">Enter chart type:</label>
+     <input type="text" name="ctype">
+  </div>
+  <div class="form-group">
+     <input type="submit" class="btn btn-primary" value="Run Query">
+  </div>
+</form>
+</div>
+</div>
+
+@if(Model.ErrorString == ""){
+<form id="c-s">
+@for(var i = 0; i < Model.XVals.Count; i++){
+<input type="hidden" data-x="@Model.XVals[i]" data-y="@Model.YVals[i]" >
+}
+</form>
+<div class="row">
+<div class="col-lg-6">
+  <h3 class="text-info">Search Results</h3>
+  <table class="table table-responsive" id="table-linqtest">
+    <tr>
+	  <th>XVal</th>
+	  <th>YVal</th>
+	</tr>
+	@for(var i = 0; i < Model.XVals.Count; i++){
+      <tr>
+	    <td>@Model.XVals[i]</td>
+        <td>@Model.YVals[i]</td>
+	  </tr>
+    }
+  </table>
+  <script> //$('#table-linqtest').DataTable();</script>
+</div>
+<div class="col-lg-6">
+<div class="card">
+<div class="card-title">
+ <h4>Search Results</h4>
+
+</div>
+<div class="linqtest-chart">
+    <canvas id="linqtest-chart" data-ctype="@Model.CType"></canvas>
+</div>
+                        </div>
+</div>
+</div>
+
+}
+else{
+<div class="row">
+  <div class="col-lg-12">
+    <div class="alert alert-danger">@Model.ErrorString</div>
+  </div>
+</div>
+}
+
+@section Scripts{
+   <script src="~/js/lib/chart-js/Chart.bundle.js"></script>
+    <script src="~/js/lib/chart-js/linqtest-chart-init.js" asp-append-version="true"></script>
+}
