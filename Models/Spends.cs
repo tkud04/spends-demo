@@ -12,9 +12,6 @@ namespace SpendsDemo.Models
 		public string Name { get; set; }
 		
 		[Required]
-		public string Month { get; set; }
-		
-		[Required]
 		public string Media { get; set; }
 		
 		[Required]
@@ -40,12 +37,19 @@ namespace SpendsDemo.Models
 		public int TVRadio { get; set; }
 		
 		[Required]
+		[Display(Name = "Days")]
 		public string Days { get; set; }
 		
+		[Display(Name = "Date")]
+		[DataType(DataType.Date)]
+        public DateTime TransactionDate{ get; set; }
+		
 		[Display(Name = "Time Band")]
+		[DataType(DataType.Time)]
 		public string TimeBand { get; set; }
 		
 		[Display(Name = "Time Slot")]
+		[DataType(DataType.Time)]
 		public string TimeSlot { get; set; }
 		
 		[Required]
@@ -64,8 +68,8 @@ namespace SpendsDemo.Models
 		[DataType(DataType.Currency)]
 		public string TotalSpend { get; set; }
         
-		[Display(Name = "Date Added")]
+		[Display(Name = "Upload Date")]
 		[DataType(DataType.Date)]
-        public DateTime dateAdded{ get; set; }
+        public DateTime DateAdded{ get; set; }
     }
 }

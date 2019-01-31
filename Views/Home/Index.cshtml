@@ -7,7 +7,7 @@
 
 <form id="dt-1">
 @foreach(var item in Model.Spends){
-<input type="hidden" data-month="@Html.DisplayFor(modelItem => item.Month)" data-media="@Html.DisplayFor(modelItem => item.Media)" data-id="@Html.DisplayFor(modelItem => item.Id)" data-name="@Html.DisplayFor(modelItem => item.Name)" data-spend="@Html.DisplayFor(modelItem => item.TotalSpend)">
+<input type="hidden" data-month="@Html.DisplayFor(modelItem => item.TransactionDate)" data-media="@Html.DisplayFor(modelItem => item.Media)" data-id="@Html.DisplayFor(modelItem => item.Id)" data-name="@Html.DisplayFor(modelItem => item.Name)" data-spend="@Html.DisplayFor(modelItem => item.TotalSpend)">
 }
 </form>
 

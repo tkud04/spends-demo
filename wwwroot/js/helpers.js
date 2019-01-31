@@ -13,11 +13,19 @@ function getChartOptions(ctype){
 			}
 		}
 		break;
+
+		case 'doughnut':
+		  ret = {
+			responsive: true
+		}
+		break;
 	}
 	
 	return ret;
 }
 
+
+//Serialize the data from backend
 function serializeChartForm(fm){
 	var ret = [];
 	ret["x"] = [];

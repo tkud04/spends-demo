@@ -42,5 +42,5 @@ c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Views\Uploads\Test.g.cshtml.c
 c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
-c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Views\LinqTest\LinqTestError.g.cshtml.cs
 c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Views\Home\LinqTest.g.cshtml.cs
+c:\dotnet\SpendsDemo\obj\Debug\netcoreapp2.2\Razor\Views\Home\GB.g.cshtml.cs

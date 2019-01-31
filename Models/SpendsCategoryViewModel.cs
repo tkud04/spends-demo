@@ -6,6 +6,8 @@ namespace SpendsDemo.Models
     public class SpendsCategoryViewModel
     {
         public List<Spends> Spends;
+        public List<SpendSums> SpendSums;
+        public List<SpendComparisons> SpendComparisons;
         public List<string> Months;
         public List<string> XVals;
         public List<string> YVals;

@@ -63,7 +63,7 @@ namespace SpendsDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Month,Media,Region,Quarter,Category,Advertizer,Brand,Station,TVRadio,Days,TimeBand,TimeSlot,Print,AverageDuration,AdSize,TotalSpend,dateAdded")] Spends spends)
+        public async Task<IActionResult> Create([Bind("Id,Name,Media,Region,Quarter,Category,Advertizer,Brand,Station,TVRadio,Days,TransactionDate,TimeBand,TimeSlot,Print,AverageDuration,AdSize,TotalSpend,DateAdded")] Spends spends)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace SpendsDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Name,Month,Media,Region,Quarter,Category,Advertizer,Brand,Station,TVRadio,Days,TimeBand,TimeSlot,Print,AverageDuration,AdSize,TotalSpend,dateAdded")] Spends spends)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,Name,Media,Region,Quarter,Category,Advertizer,Brand,Station,TVRadio,Days,TransactionDate,TimeBand,TimeSlot,Print,AverageDuration,AdSize,TotalSpend,DateAdded")] Spends spends)
         {
             if (id != spends.Id)
             {

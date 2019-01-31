@@ -10,18 +10,12 @@
 <div>
     <h4>Spends</h4>
     <hr />
-    <dl class="row">
+<dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Month)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Month)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Media)
@@ -78,6 +72,12 @@
             @Html.DisplayFor(model => model.Days)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TransactionDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TransactionDate)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TimeBand)
         </dt>
         <dd class = "col-sm-10">
@@ -114,13 +114,12 @@
             @Html.DisplayFor(model => model.TotalSpend)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.dateAdded)
+            @Html.DisplayNameFor(model => model.DateAdded)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.dateAdded)
+            @Html.DisplayFor(model => model.DateAdded)
         </dd>
-    </dl>
-    
+    </dl>    
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

@@ -1,0 +1,16 @@
+@model List<SpendComparisons>
+
+@{
+    ViewData["Title"] = "Query Test Page";
+}
+
+<div class="row">
+<div class="col-lg-12">
+<h4>Sums for totalspends</h4>
+<ul>
+@foreach(var r in Model){
+<li>[@r.XKey ==> @r.YKey] ===> @r.TCount</li>
+}
+</ul>
+</div>
+</div>

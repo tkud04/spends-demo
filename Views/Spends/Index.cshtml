@@ -16,9 +16,6 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Month)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Media)
             </th>
             <th>
@@ -42,8 +39,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.TVRadio)
             </th>
-            <th>
+			<th>
                 @Html.DisplayNameFor(model => model.Days)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TimeBand)
@@ -64,7 +64,7 @@
                 @Html.DisplayNameFor(model => model.TotalSpend)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.dateAdded)
+                @Html.DisplayNameFor(model => model.DateAdded)
             </th>
             <th></th>
         </tr>
@@ -74,9 +74,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Month)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Media)
@@ -102,8 +99,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TVRadio)
             </td>
-            <td>
+			<td>
                 @Html.DisplayFor(modelItem => item.Days)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TimeBand)
@@ -124,7 +124,7 @@
                 @Html.DisplayFor(modelItem => item.TotalSpend)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.dateAdded)
+                @Html.DisplayFor(modelItem => item.DateAdded)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

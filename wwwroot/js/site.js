@@ -3,6 +3,7 @@
 
 // Write your JavaScript code.
 $('#uploadProgress').hide();
+$('#fg-y').hide();
 
 $(document).ready(function(){
 	$('#uploadForm').on('submit',function(e){
@@ -71,4 +72,16 @@ $(document).ready(function(){
 			}
 		});
 	})
+	
+	$('#qtype').change(function(e){
+		e.preventDefault();
+		let qtype = $(this).val();
+		
+		if(qtype == "total" || qtype == "none"){
+			$('#fg-y').hide();
+		}
+		else if(qtype == "comparison"){
+			$('#fg-y').fadeIn();
+		}
+	});
 });
